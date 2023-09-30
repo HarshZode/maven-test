@@ -1,3 +1,6 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.config.OperatingSystem;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,11 +15,11 @@ import org.openqa.selenium.interactions.Actions;
 public class SeleniumTest {
 
     public static WebDriver driver = new FirefoxDriver();
-
     @BeforeTest
     void setup() {
-        System.setProperty("webdriver.gecko.driver", "asset/geckodriver.exe");
-
+        WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
+//        System.setProperty("webdriver.gecko.driver", "asset/geckodriver.exe");
+//        WebDriverManager.firefoxdriver().setup();
         // driver.get("http://127.0.0.1:5500/index.html");
         driver.get("http://65.2.74.157:80/");
 
