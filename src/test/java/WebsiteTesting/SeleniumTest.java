@@ -19,7 +19,7 @@ public class SeleniumTest {
     public static WebDriver driver = new FirefoxDriver();
     @BeforeTest
     void setup() {
-        System.out.println("Test")
+        System.out.println("Test");
         // WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
 //        System.setProperty("webdriver.gecko.driver", "asset/geckodriver.exe");
 //        WebDriverManager.firefoxdriver().setup();
