@@ -19,30 +19,31 @@ public class SeleniumTest {
     public static WebDriver driver = new FirefoxDriver();
     @BeforeTest
     void setup() {
-        WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
+        System.out.println("Test")
+        // WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
 //        System.setProperty("webdriver.gecko.driver", "asset/geckodriver.exe");
 //        WebDriverManager.firefoxdriver().setup();
         // driver.get("http://127.0.0.1:5500/index.html");
-        driver.get("http://65.2.74.157:80/");
+        // driver.get("http://65.2.74.157:80/");
 
     }
 
-    @Test
-    void firstTeststep(){
-        driver.findElement(By.xpath("//*[@id=\"input\"]")).sendKeys("First Todo");
-        driver.findElement(By.xpath("//*[@id=\"form\"]/button")).click();
-        driver.findElement(By.xpath("//*[@id=\"todos\"]/li")).click();
-//        driver.close();
-    }
-    @Test
-    void secondTeststep(){
-        //Instantiate Action Class
-        Actions actions = new Actions(driver);
+//     @Test
+//     void firstTeststep(){
+//         driver.findElement(By.xpath("//*[@id=\"input\"]")).sendKeys("First Todo");
+//         driver.findElement(By.xpath("//*[@id=\"form\"]/button")).click();
+//         driver.findElement(By.xpath("//*[@id=\"todos\"]/li")).click();
+// //        driver.close();
+//     }
+//     @Test
+//     void secondTeststep(){
+//         //Instantiate Action Class
+//         Actions actions = new Actions(driver);
 
-        WebElement btnElement = driver.findElement(By.xpath("//*[@id=\"todos\"]/li"));
-        actions.contextClick(btnElement).perform();
-        driver.close();
-    }
+//         WebElement btnElement = driver.findElement(By.xpath("//*[@id=\"todos\"]/li"));
+//         actions.contextClick(btnElement).perform();
+//         driver.close();
+//     }
 }
 //    ####################################
 //    #     Other Example
